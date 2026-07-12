@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Metadata -->
+  <title>QuickKit | Free 100% Private Browser Image Utilities</title>
+  <meta name="description" content="QuickKit offers private, offline-first image compression, resizing, and conversion. Your files never leave your browser, ensuring 100% security.">
+  <meta name="keywords" content="image compressor, image resizer, image converter, webp to png, png to webp, heic to jpg, private tools, offline utilities">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://quickkit.io/">
+  <meta property="og:title" content="QuickKit | Free 100% Private Browser Image Utilities">
+  <meta property="og:description" content="QuickKit offers private, offline-first image compression, resizing, and conversion. Your files never leave your browser, ensuring 100% security.">
+  <meta property="og:image" content="https://quickkit.io/assets/og-image.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://quickkit.io/">
+  <meta property="twitter:title" content="QuickKit | Free 100% Private Browser Image Utilities">
+  <meta property="twitter:description" content="QuickKit offers private, offline-first image compression, resizing, and conversion. Your files never leave your browser, ensuring 100% security.">
+  <meta property="twitter:image" content="https://quickkit.io/assets/og-image.png">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" href="https://img.icons8.com/neon/96/000000/wrench.png">
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Stylesheets & CDN Icons -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://quickkit.io/#webapp",
+        "url": "https://quickkit.io/",
+        "name": "QuickKit Client-Side Image Tools",
+        "applicationCategory": "MultimediaApplication",
+        "operatingSystem": "All",
+        "browserRequirements": "Requires JavaScript and HTML5 Canvas support",
+        "description": "Premium, developer-centric, offline-first image compression, resizing, and conversion utilities operating entirely client-side.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://quickkit.io/#organization",
+        "name": "QuickKit",
+        "url": "https://quickkit.io/",
+        "logo": "https://img.icons8.com/neon/96/000000/wrench.png",
+        "sameAs": []
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <div class="app-container">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <a href="index.html" class="logo">
+          <i class="fa-solid fa-bolt"></i>
+          <span>QuickKit</span>
+        </a>
+      </div>
+      
+      <nav class="sidebar-nav">
+        <!-- Favorites dynamic section -->
+        <div id="favorites-nav-section" style="display: none;"></div>
+
+        <div class="nav-section-title">Workspace Tools</div>
+        <a href="image-compressor/" class="nav-link">
+          <i class="fa-solid fa-minimize"></i>
+          <span>Image Compressor</span>
+        </a>
+        <a href="image-resizer/" class="nav-link">
+          <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+          <span>Image Resizer</span>
+        </a>
+        
+        <div class="nav-section-title">Converters</div>
+        <a href="webp-to-png/" class="nav-link">
+          <i class="fa-solid fa-globe"></i>
+          <span>WebP → PNG</span>
+        </a>
+        <a href="png-to-webp/" class="nav-link">
+          <i class="fa-solid fa-image"></i>
+          <span>PNG → WebP</span>
+        </a>
+        <a href="heic-to-jpg/" class="nav-link">
+          <i class="fa-solid fa-mobile-screen-button"></i>
+          <span>HEIC → JPG</span>
+        </a>
+        <a href="avif-to-png/" class="nav-link">
+          <i class="fa-solid fa-bolt"></i>
+          <span>AVIF → PNG</span>
+        </a>
+        <a href="svg-to-png/" class="nav-link">
+          <i class="fa-solid fa-compass-drafting"></i>
+          <span>SVG → PNG</span>
+        </a>
+        <a href="png-to-ico/" class="nav-link">
+          <i class="fa-solid fa-cubes"></i>
+          <span>PNG → ICO</span>
+        </a>
+      </nav>
+      
+      <!-- Persistent Media Shelf -->
+      <div class="media-shelf">
+        <div class="shelf-title">
+          <span>Local Media Shelf</span>
+          <span class="shelf-clear" id="shelf-clear" title="Clear Shelf"><i class="fa-solid fa-trash-can"></i></span>
+        </div>
+        <div class="shelf-items" id="shelf-items">
+          <div class="shelf-empty-hint">No uploads yet</div>
+        </div>
+      </div>
+
+      <div class="sidebar-footer">
+        <span>QuickKit v1.0.0</span>
+      </div>
+    </aside>
+
+    <!-- Main Workspace Container -->
+    <main class="main-content">
+      
+      <!-- Top navbar with Command Palette trigger -->
+      <header class="top-nav">
+        <div class="breadcrumb">
+          <span>QuickKit Workspace</span>
+        </div>
+        <div class="top-actions">
+          <button class="btn-command-palette-trigger" id="palette-trigger" title="Open search menu">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <span>Search utilities</span>
+            <kbd>Ctrl K</kbd>
+          </button>
+        </div>
+      </header>
+
+      <!-- Content viewport -->
+      <div class="content-body">
+        
+        <!-- Hero section introducing the core value proposition -->
+        <section class="hero">
+          <h1 class="hero-title">Your files never leave your browser. Ever.</h1>
+          <p class="hero-subtitle">Premium, developer-centric, offline-first image tools. Process files locally at lightning speed without sending data to servers.</p>
+          <div class="privacy-badge">
+            <i class="fa-solid fa-shield-halved"></i> 100% Client-Side Processing
+          </div>
+          <div class="social-proof-badges" style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 24px;">
+            <span class="proof-badge" style="font-size: 0.75rem; color: var(--text-secondary); background: rgba(255,255,255,0.02); padding: 6px 12px; border-radius: 20px; border: 1px solid var(--border-color); display: inline-flex; align-items: center; gap: 6px;">
+              <i class="fa-solid fa-circle-check" style="color: var(--color-success);"></i> 100% Private
+            </span>
+            <span class="proof-badge" style="font-size: 0.75rem; color: var(--text-secondary); background: rgba(255,255,255,0.02); padding: 6px 12px; border-radius: 20px; border: 1px solid var(--border-color); display: inline-flex; align-items: center; gap: 6px;">
+              <i class="fa-solid fa-circle-check" style="color: var(--color-success);"></i> No Upload Limits
+            </span>
+            <span class="proof-badge" style="font-size: 0.75rem; color: var(--text-secondary); background: rgba(255,255,255,0.02); padding: 6px 12px; border-radius: 20px; border: 1px solid var(--border-color); display: inline-flex; align-items: center; gap: 6px;">
+              <i class="fa-solid fa-circle-check" style="color: var(--color-success);"></i> Works Offline
+            </span>
+            <span class="proof-badge" style="font-size: 0.75rem; color: var(--text-secondary); background: rgba(255,255,255,0.02); padding: 6px 12px; border-radius: 20px; border: 1px solid var(--border-color); display: inline-flex; align-items: center; gap: 6px;">
+              <i class="fa-solid fa-circle-check" style="color: var(--color-success);"></i> Free Forever
+            </span>
+          </div>
+        </section>
+
+        <!-- Zero Friction Dropzone -->
+        <div class="workspace-dropzone" id="compressor-dropzone" style="cursor: default;">
+          <div class="dropzone-icon-wrapper" style="pointer-events: none;">
+            <i class="fa-solid fa-cloud-arrow-up"></i>
+          </div>
+          <h2 style="pointer-events: none;">Drag & Drop Image</h2>
+          <p style="margin-top: 4px; color: var(--text-muted); font-size: 0.88rem;">or <strong style="color: var(--color-primary); cursor: pointer;" onclick="document.getElementById('compressor-file-input').click();">Browse Files</strong> &nbsp;|&nbsp; Paste screenshot (<kbd style="background: rgba(255,255,255,0.05); border: 1px solid var(--border-color); padding: 2px 5px; border-radius: 4px; font-size: 0.7rem; font-family: inherit; pointer-events: none;">Ctrl + V</kbd>)</p>
+          <p style="font-size: 0.72rem; color: var(--text-muted); margin-top: 10px; pointer-events: none;">Supports WebP, PNG, JPEG, AVIF, SVG, HEIC</p>
+          <input type="file" id="compressor-file-input" style="display: none;" accept="image/*,.heic">
+        </div>
+
+        <!-- Interactive Workspace (Revealed on file drop) -->
+        <section class="active-workspace" id="active-workspace">
+          
+          <div class="workspace-header">
+            <div class="active-file-info">
+              <div class="active-file-thumb">
+                <img id="img-thumb-preview" src="" alt="Source preview">
+              </div>
+              <div class="active-file-details">
+                <span class="active-file-name" id="active-file-name">filename.png</span>
+                <span class="active-file-size" id="active-file-size">0.0 KB</span>
+              </div>
+            </div>
+            <span class="privacy-badge" style="background: rgba(124,58,237,0.08); border-color: rgba(124,58,237,0.15); color: var(--color-primary);">
+              <i class="fa-solid fa-bolt"></i> Local Memory
+            </span>
+          </div>
+
+          <div class="workspace-panels">
+            <!-- Configuration Settings Panel -->
+            <div class="panel">
+              <h2 class="panel-title"><i class="fa-solid fa-sliders"></i> Operations Pipeline</h2>
+              
+              <!-- Prominent stats cards -->
+              <div class="stats-prominent-grid">
+                <div class="stat-prominent-box">
+                  <span class="stat-prominent-label">Original</span>
+                  <span class="stat-prominent-val" id="compare-size-orig">-</span>
+                </div>
+                <div class="stat-prominent-box">
+                  <span class="stat-prominent-label">Optimized</span>
+                  <span class="stat-prominent-val" id="compare-size-opt">-</span>
+                </div>
+                <div class="stat-prominent-box">
+                  <span class="stat-prominent-label">Savings</span>
+                  <span class="stat-prominent-val savings" id="compare-savings-pct">-</span>
+                </div>
+              </div>
+
+              <!-- Scale Dimensions Settings -->
+              <div class="slider-group">
+                <div class="slider-header">
+                  <span class="form-label">Scale Image (Dimensions)</span>
+                  <span class="slider-val" id="scale-val">100%</span>
+                </div>
+                <input type="range" id="compress-scale" min="10" max="100" value="100">
+              </div>
+
+              <!-- Quality Compression Settings -->
+              <div class="slider-group">
+                <div class="slider-header">
+                  <span class="form-label">Compression Quality</span>
+                  <span class="slider-val" id="quality-val">80%</span>
+                </div>
+                <input type="range" id="compress-quality" min="10" max="100" value="80">
+              </div>
+
+              <!-- Convert Target Selection -->
+              <div class="form-group">
+                <label class="form-label" for="compressor-target-format">Output Format</label>
+                <select id="compressor-target-format" class="form-control" style="background: #000; border-color: var(--border-color);">
+                  <option value="jpeg">JPG (Standard JPEG)</option>
+                  <option value="png">PNG (Lossless, Transparent)</option>
+                  <option value="webp">WebP (Highly Optimized)</option>
+                </select>
+              </div>
+
+              <div class="form-group" style="margin-top: 10px;">
+                <button class="btn btn-primary" id="btn-download-compressed" style="width: 100%;">
+                  <i class="fa-solid fa-download"></i> Apply & Save Image
+                </button>
+              </div>
+            </div>
+
+            <!-- Visual Split Compare Canvas Workspace -->
+            <div class="panel" style="gap: 16px;">
+              <h3 class="panel-title" style="border: none; padding-bottom: 0;">
+                <i class="fa-solid fa-images"></i> Visual Comparison Slider
+              </h3>
+              
+              <div class="slider-workspace" id="slider-workspace">
+                <!-- Original Image (Background) -->
+                <div class="slider-img" id="slider-img-orig">
+                  <img id="img-orig-src" src="" alt="Original before">
+                </div>
+                <!-- Optimized Image (Foreground, clipped) -->
+                <div class="slider-img slider-img-opt" id="slider-img-opt">
+                  <img id="img-opt-src" src="" alt="Compressed after">
+                </div>
+                <!-- Slide Handle -->
+                <div class="slider-handle" id="slider-handle">
+                  <div class="slider-handle-circle">
+                    <i class="fa-solid fa-arrows-left-right"></i>
+                  </div>
+                </div>
+                <span class="compare-badge before">Original Image</span>
+                <span class="compare-badge after">Optimized Preview</span>
+              </div>
+            </div>
+          </div>
+
+        </section>
+
+        <!-- Tool workspace footer ad -->
+        <div class="ad-placeholder"></div>
+
+        <!-- Persistent Recent Tasks History Log Panel -->
+        <section class="history-section">
+          <div class="history-title-bar">
+            <h3>Recent Tasks</h3>
+            <span style="font-size: 0.75rem; color: var(--text-muted);"><i class="fa-solid fa-clock-rotate-left"></i> Session logs stored in browser DB</span>
+          </div>
+          <div class="history-list" id="recent-tasks-list">
+            <div class="shelf-empty-hint">No recent tasks logged.</div>
+          </div>
+        </section>
+
+        <!-- Static directory indexes for Google Crawling -->
+        <section class="history-section" style="margin-top: 60px;">
+          <div class="history-title-bar">
+            <h3>Image Utility Hubs</h3>
+          </div>
+          <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 16px;">
+            Targeting specific conversion formats directly client-side. Select one of our landing pages to configure custom presets:
+          </p>
+          <div class="landing-grid">
+            <a href="webp-to-png/" class="landing-card">
+              <div style="font-family: var(--font-title); font-size: 1rem; color: #fff;">WebP to PNG</div>
+              <div style="color: var(--color-warning); font-size: 0.72rem; margin: 4px 0;"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              <div style="color: var(--text-muted); font-size: 0.68rem; font-weight: normal;">100% Browser | Private</div>
+            </a>
+            <a href="png-to-webp/" class="landing-card">
+              <div style="font-family: var(--font-title); font-size: 1rem; color: #fff;">PNG to WebP</div>
+              <div style="color: var(--color-warning); font-size: 0.72rem; margin: 4px 0;"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              <div style="color: var(--text-muted); font-size: 0.68rem; font-weight: normal;">Speed Up Site | 100% Free</div>
+            </a>
+            <a href="heic-to-jpg/" class="landing-card">
+              <div style="font-family: var(--font-title); font-size: 1rem; color: #fff;">HEIC to JPG</div>
+              <div style="color: var(--color-warning); font-size: 0.72rem; margin: 4px 0;"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              <div style="color: var(--text-muted); font-size: 0.68rem; font-weight: normal;">iPhone Photos | Offline</div>
+            </a>
+            <a href="avif-to-png/" class="landing-card">
+              <div style="font-family: var(--font-title); font-size: 1rem; color: #fff;">AVIF to PNG</div>
+              <div style="color: var(--color-warning); font-size: 0.72rem; margin: 4px 0;"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              <div style="color: var(--text-muted); font-size: 0.68rem; font-weight: normal;">Next-Gen | Zero Uploads</div>
+            </a>
+            <a href="svg-to-png/" class="landing-card">
+              <div style="font-family: var(--font-title); font-size: 1rem; color: #fff;">SVG to PNG</div>
+              <div style="color: var(--color-warning); font-size: 0.72rem; margin: 4px 0;"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              <div style="color: var(--text-muted); font-size: 0.68rem; font-weight: normal;">Rasterize Vector | High-Res</div>
+            </a>
+            <a href="png-to-ico/" class="landing-card">
+              <div style="font-family: var(--font-title); font-size: 1rem; color: #fff;">PNG to ICO</div>
+              <div style="color: var(--color-warning); font-size: 0.72rem; margin: 4px 0;"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              <div style="color: var(--text-muted); font-size: 0.68rem; font-weight: normal;">Favicon Creator | 32x32</div>
+            </a>
+            <a href="image-compressor/" class="landing-card">
+              <div style="font-family: var(--font-title); font-size: 1rem; color: #fff;">Image Compressor</div>
+              <div style="color: var(--color-warning); font-size: 0.72rem; margin: 4px 0;"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              <div style="color: var(--text-muted); font-size: 0.68rem; font-weight: normal;">Visual Split Slider | GPU</div>
+            </a>
+            <a href="image-resizer/" class="landing-card">
+              <div style="font-family: var(--font-title); font-size: 1rem; color: #fff;">Image Resizer</div>
+              <div style="color: var(--color-warning); font-size: 0.72rem; margin: 4px 0;"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              <div style="color: var(--text-muted); font-size: 0.68rem; font-weight: normal;">Proportional Scale | Aspect Lock</div>
+            </a>
+          </div>
+        </section>
+
+        <!-- Bottom Footer Ad slot -->
+        <div class="ad-placeholder"></div>
+
+        <!-- Unified Footer -->
+        <footer class="app-footer">
+          <div class="footer-row">
+            <div class="footer-column" style="flex: 2; min-width: 250px;">
+              <a href="./index.html" class="footer-brand">
+                <i class="fa-solid fa-bolt" style="color:var(--color-primary);"></i>
+                <span>QuickKit</span>
+              </a>
+              <p style="font-size:0.78rem; color:var(--text-muted); line-height:1.6; margin-top:8px;">
+                All image processing happens locally in your browser. No uploads, no tracking of your files, no servers involved.
+              </p>
+              <a href="https://github.com/" target="_blank" class="footer-link" style="margin-top: 12px; font-size: 0.78rem;">
+                <i class="fa-brands fa-github"></i> ⭐ Open Source Components
+              </a>
+            </div>
+            <div class="footer-column">
+              <h4>Workspace</h4>
+              <a href="./image-compressor/" class="footer-link">Image Compressor</a>
+              <a href="./image-resizer/" class="footer-link">Image Resizer</a>
+            </div>
+            <div class="footer-column">
+              <h4>Converters</h4>
+              <a href="./webp-to-png/" class="footer-link">WebP → PNG</a>
+              <a href="./png-to-webp/" class="footer-link">PNG → WebP</a>
+              <a href="./heic-to-jpg/" class="footer-link">HEIC → JPG</a>
+              <a href="./avif-to-png/" class="footer-link">AVIF → PNG</a>
+            </div>
+            <div class="footer-column">
+              <h4>Resources</h4>
+              <a href="./compare/webp-vs-png/" class="footer-link">Compare Formats</a>
+              <a href="./privacy/" class="footer-link">Privacy Policy</a>
+              <a href="./terms/" class="footer-link">Terms of Service</a>
+              <a href="./contact/" class="footer-link">Contact</a>
+            </div>
+          </div>
+          
+          <div class="footer-row" style="border-top: 1px solid var(--border-color); padding-top: 20px; margin-top: 10px;">
+            <div style="font-size: 0.78rem; color: var(--text-muted); line-height: 1.6;">
+              <strong style="color: #fff; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.5px; display: block; margin-bottom: 6px;">Supported Formats</strong>
+              PNG • JPG • JPEG • WebP • AVIF • HEIC • SVG • ICO
+            </div>
+          </div>
+
+          <div class="footer-bottom">
+            <span>© 2026 QuickKit. Offline-first local execution.</span>
+            <span>Zero-server privacy assurance</span>
+          </div>
+        </footer>
+
+      </div>
+    </main>
+
+  </div>
+
+  <!-- Mobile Bottom Navigation Bar -->
+  <div class="bottom-nav-bar">
+    <a href="#" class="bottom-nav-link active" data-action="home">
+      <i class="fa-solid fa-house"></i>
+      <span>Home</span>
+    </a>
+    <a href="#" class="bottom-nav-link" data-action="search">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <span>Search</span>
+    </a>
+    <a href="#" class="bottom-nav-link" data-action="history">
+      <i class="fa-solid fa-clock-rotate-left"></i>
+      <span>Recent</span>
+    </a>
+  </div>
+
+  <!-- Command Palette Modal Overlay -->
+  <div class="command-palette-overlay" id="command-palette-overlay">
+    <div class="command-palette">
+      <div class="command-palette-search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" class="command-palette-input" id="command-input" placeholder="Search QuickKit utilities...">
+      </div>
+      <div class="command-palette-results" id="command-results">
+        <!-- Results rendered dynamically in JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script type="module" src="js/db.js"></script>
+  <script type="module" src="js/app.js"></script>
+  <script type="module">
+    import { initCompressor } from './js/tools/compressor.js';
+    initCompressor();
+  </script>
+</body>
+</html>

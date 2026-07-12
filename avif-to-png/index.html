@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Metadata -->
+  <title>Convert AVIF to PNG Online - Free & Private | QuickKit</title>
+  <meta name="description" content="Convert AVIF (AV1 Image File Format) files to transparent PNG images locally in your web browser. 100% private, free, batch conversion supported.">
+  <meta name="keywords" content="avif to png, convert avif, free avif to png converter, batch avif converter, local web converter">
+  <meta name="robots" content="index, follow">
+
+  <link rel="icon" type="image/png" href="https://img.icons8.com/neon/96/000000/wrench.png">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <div class="app-container">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <a href="../index.html" class="logo">
+          <i class="fa-solid fa-bolt"></i>
+          <span>QuickKit</span>
+        </a>
+      </div>
+      
+      <nav class="sidebar-nav">
+        <div class="nav-section-title">Workspace Tools</div>
+        <a href="../image-compressor/" class="nav-link">
+          <i class="fa-solid fa-minimize"></i>
+          <span>Image Compressor</span>
+        </a>
+        <a href="../image-resizer/" class="nav-link">
+          <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+          <span>Image Resizer</span>
+        </a>
+        
+        <div class="nav-section-title">Converters</div>
+        <a href="../webp-to-png/" class="nav-link"><span>WebP → PNG</span></a>
+        <a href="../png-to-webp/" class="nav-link"><span>PNG → WebP</span></a>
+        <a href="../heic-to-jpg/" class="nav-link"><span>HEIC → JPG</span></a>
+        <a href="./" class="nav-link active"><span>AVIF → PNG</span></a>
+        <a href="../svg-to-png/" class="nav-link"><span>SVG → PNG</span></a>
+        <a href="../png-to-ico/" class="nav-link"><span>PNG → ICO</span></a>
+      </nav>
+      
+      <div class="media-shelf">
+        <div class="shelf-title">
+          <span>Local Media Shelf</span>
+          <span class="shelf-clear" id="shelf-clear" title="Clear Shelf"><i class="fa-solid fa-trash-can"></i></span>
+        </div>
+        <div class="shelf-items" id="shelf-items">
+          <div class="shelf-empty-hint">No uploads yet</div>
+        </div>
+      </div>
+
+      <div class="sidebar-footer">
+        <span>QuickKit v1.0.0</span>
+      </div>
+    </aside>
+
+    <!-- Main Workspace -->
+    <main class="main-content">
+      <header class="top-nav">
+        <div class="breadcrumb">
+          <a href="../index.html">QuickKit</a>
+          <span class="breadcrumb-sep">/</span>
+          <span>AVIF to PNG</span>
+        </div>
+        <div class="top-actions">
+          <button class="btn-command-palette-trigger" id="palette-trigger">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <span>Search utilities</span>
+            <kbd>Ctrl K</kbd>
+          </button>
+        </div>
+      </header>
+
+      <div class="content-body">
+        
+        <section class="hero">
+          <h1 class="hero-title">Convert AVIF to PNG</h1>
+          <p class="hero-subtitle">Batch convert next-generation AVIF images to universally compatible PNG format. 100% private, zero uploads.</p>
+          <div class="privacy-badge">
+            <i class="fa-solid fa-shield-halved"></i> 100% Client-Side
+          </div>
+        </section>
+
+        <!-- Dropzone -->
+        <div class="workspace-dropzone" id="converter-dropzone">
+          <div class="dropzone-icon-wrapper">
+            <i class="fa-solid fa-arrow-right-arrow-left"></i>
+          </div>
+          <h2>Drop your AVIF files to convert</h2>
+          <p>Your files never leave your browser. Ever.</p>
+          <input type="file" id="converter-file-input" style="display: none;" accept=".avif" multiple>
+        </div>
+
+        <!-- Active Workspace -->
+        <section class="active-workspace" id="active-workspace">
+          <div class="panel">
+            <h2 class="panel-title"><i class="fa-solid fa-gears"></i> Batch Operations Queue</h2>
+            
+            <div class="form-group" style="display: none;">
+              <input type="hidden" id="converter-target-format" value="png">
+            </div>
+
+            <div class="batch-list" id="batch-list">
+              <!-- Rendered in JS -->
+            </div>
+
+            <div class="form-group" style="margin-top: 20px;">
+              <button class="btn btn-primary" id="btn-convert-all" style="width: 100%;">
+                <i class="fa-solid fa-gears"></i> Convert All & Save
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section" style="margin-top: 60px;">
+          <h2 class="faq-title" style="text-align: left; margin-bottom: 20px;">What is AVIF?</h2>
+          <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 24px;">
+            AVIF is a next-generation compression format based on the AV1 video codec technology. It provides far superior compression compared to WebP, JPEG, and PNG. Because AVIF is relatively new, some image editors and older web browsers cannot render it. Converting AVIF to PNG allows you to edit or share it without compatibility hurdles.
+          </p>
+
+          <h2 class="faq-title">Frequently Asked Questions</h2>
+          <div class="faq-grid">
+            <div class="faq-card">
+              <div class="faq-header">
+                <span>Does AVIF to PNG retain quality?</span>
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+              <div class="faq-body">
+                <div class="faq-content">
+                  Yes. PNG is a lossless format, meaning it preserves every pixel value. The conversion process decodes the compressed AVIF data and saves it in a pixel-perfect, lossless PNG container.
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- Command Palette Modal -->
+  <div class="command-palette-overlay" id="command-palette-overlay">
+    <div class="command-palette">
+      <div class="command-palette-search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" class="command-palette-input" id="command-input" placeholder="Search QuickKit utilities...">
+      </div>
+      <div class="command-palette-results" id="command-results"></div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script type="module" src="../js/db.js"></script>
+  <script type="module" src="../js/app.js"></script>
+  <script type="module">
+    import { initConverter } from '../js/tools/converter.js';
+    initConverter('avif', 'png');
+  </script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Privacy Policy - QuickKit</title>
+  <meta name="description" content="QuickKit Privacy Policy. Learn how we process your images 100% locally on your computer with zero file uploads.">
+  <meta name="robots" content="index, follow">
+
+  <link rel="icon" type="image/png" href="https://img.icons8.com/neon/96/000000/wrench.png">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <div class="app-container">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <a href="../index.html" class="logo">
+          <i class="fa-solid fa-bolt"></i>
+          <span>QuickKit</span>
+        </a>
+      </div>
+      
+      <nav class="sidebar-nav">
+        <!-- Favorites dynamic section -->
+        <div id="favorites-nav-section" style="display: none;"></div>
+
+        <div class="nav-section-title">Workspace Tools</div>
+        <a href="../image-compressor/" class="nav-link">
+          <i class="fa-solid fa-minimize"></i>
+          <span>Image Compressor</span>
+        </a>
+        <a href="../image-resizer/" class="nav-link">
+          <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+          <span>Image Resizer</span>
+        </a>
+        
+        <div class="nav-section-title">Converters</div>
+        <a href="../webp-to-png/" class="nav-link">
+          <i class="fa-solid fa-globe"></i>
+          <span>WebP → PNG</span>
+        </a>
+        <a href="../png-to-webp/" class="nav-link">
+          <i class="fa-solid fa-image"></i>
+          <span>PNG → WebP</span>
+        </a>
+        <a href="../heic-to-jpg/" class="nav-link">
+          <i class="fa-solid fa-mobile-screen-button"></i>
+          <span>HEIC → JPG</span>
+        </a>
+      </nav>
+      
+      <div class="sidebar-footer">
+        <span>QuickKit v1.0.0</span>
+      </div>
+    </aside>
+
+    <!-- Main Workspace -->
+    <main class="main-content">
+      <header class="top-nav">
+        <div class="breadcrumb">
+          <a href="../index.html">QuickKit</a>
+          <span class="breadcrumb-sep">/</span>
+          <span>Privacy Policy</span>
+        </div>
+      </header>
+
+      <div class="content-body" style="max-width: 800px;">
+        
+        <section class="hero" style="text-align: left; margin-bottom: 32px;">
+          <h1 class="hero-title">Privacy Policy</h1>
+          <p class="hero-subtitle" style="margin: 0; max-width: 100%;">Your files never leave your browser. Ever. This is our core privacy commitment.</p>
+        </section>
+
+        <article style="font-size: 0.98rem; color: var(--text-secondary); line-height: 1.7; display: flex; flex-direction: column; gap: 20px;">
+          <p>
+            At QuickKit, we respect your privacy. This policy explains what happens to your files and data when you use our services.
+          </p>
+
+          <h2 style="font-family: var(--font-title); color: #fff; margin-top: 20px;">1. File Processing Privacy</h2>
+          <p>
+            Traditional utility sites upload your files to their servers for processing. <strong>QuickKit does not upload your files.</strong> All file transformations, compressions, resizing, and conversions take place 100% locally on your computer using native web APIs (like Canvas API, WebAssembly, and local decoders).
+          </p>
+
+          <h2 style="font-family: var(--font-title); color: #fff; margin-top: 20px;">2. Data Storage (IndexedDB & LocalStorage)</h2>
+          <p>
+            We use client-side database engines (IndexedDB and localStorage) to cache your workspace shelf items and recent task logs. This data is stored entirely on your computer's hard drive inside your browser cache. We have no access to this database, and it is cleared automatically when you clear your browser history or click "Clear Shelf" in our sidebar.
+          </p>
+
+          <h2 style="font-family: var(--font-title); color: #fff; margin-top: 20px;">3. Cookies & Analytics</h2>
+          <p>
+            We may use cookies or lightweight privacy-first analytics tools to understand where our visitors come from and compile aggregated traffic reports. We do not track individuals, and we do not sell your information.
+          </p>
+
+          <h2 style="font-family: var(--font-title); color: #fff; margin-top: 20px;">4. Contact Us</h2>
+          <p>
+            If you have questions about our offline architecture, you can contact us at privacy@quickkit.io.
+          </p>
+        </article>
+
+        <!-- Unified Footer -->
+        <footer class="app-footer" style="margin-left: 0; padding-left: 0; padding-right: 0;">
+          <div class="footer-row">
+            <div class="footer-column">
+              <a href="../index.html" class="footer-brand">
+                <i class="fa-solid fa-bolt" style="color:var(--color-primary);"></i>
+                <span>QuickKit</span>
+              </a>
+            </div>
+            <div class="footer-column">
+              <h4>Workspace Tools</h4>
+              <a href="../image-compressor/" class="footer-link">Image Compressor</a>
+              <a href="../image-resizer/" class="footer-link">Image Resizer</a>
+            </div>
+            <div class="footer-column">
+              <h4>Company</h4>
+              <a href="../about/" class="footer-link">About Us</a>
+              <a href="../contact/" class="footer-link">Contact</a>
+              <a href="./" class="footer-link">Privacy Policy</a>
+              <a href="../terms/" class="footer-link">Terms of Service</a>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <span>© 2026 QuickKit. Local processing only.</span>
+          </div>
+        </footer>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- Mobile Bottom Navigation Bar -->
+  <div class="bottom-nav-bar">
+    <a href="../index.html" class="bottom-nav-link" data-action="home">
+      <i class="fa-solid fa-house"></i>
+      <span>Home</span>
+    </a>
+  </div>
+
+  <!-- Scripts -->
+  <script type="module" src="../js/db.js"></script>
+  <script type="module" src="../js/app.js"></script>
+</body>
+</html>

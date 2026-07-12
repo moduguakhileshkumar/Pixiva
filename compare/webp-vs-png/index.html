@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Metadata -->
+  <title>WebP vs PNG - Which Image Format is Best for Your Website? | QuickKit</title>
+  <meta name="description" content="Compare Google WebP and transparent PNG image formats. Learn about loading speeds, transparency, file sizes, and browser compatibility.">
+  <meta name="keywords" content="webp vs png, png vs webp, image formats, web optimization, transparent webp, transparent png">
+  <meta name="robots" content="index, follow">
+
+  <link rel="icon" type="image/png" href="https://img.icons8.com/neon/96/000000/wrench.png">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 32px 0;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+    }
+    .compare-table th, .compare-table td {
+      padding: 16px 20px;
+      text-align: left;
+      font-size: 0.9rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .compare-table th {
+      background: rgba(255,255,255,0.03);
+      font-weight: 700;
+      font-family: var(--font-title);
+      color: #fff;
+    }
+    .compare-table tr:last-child td {
+      border-bottom: none;
+    }
+    .badge {
+      display: inline-block;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    .badge-primary { background: var(--color-primary-glow); color: #c084fc; }
+    .badge-secondary { background: var(--color-secondary-glow); color: #22d3ee; }
+  </style>
+</head>
+<body>
+
+  <div class="app-container">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <a href="../../index.html" class="logo">
+          <i class="fa-solid fa-bolt"></i>
+          <span>QuickKit</span>
+        </a>
+      </div>
+      
+      <nav class="sidebar-nav">
+        <div class="nav-section-title">Workspace Tools</div>
+        <a href="../../image-compressor/" class="nav-link">
+          <i class="fa-solid fa-minimize"></i>
+          <span>Image Compressor</span>
+        </a>
+        <a href="../../image-resizer/" class="nav-link">
+          <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+          <span>Image Resizer</span>
+        </a>
+        
+        <div class="nav-section-title">Converters</div>
+        <a href="../../webp-to-png/" class="nav-link"><span>WebP → PNG</span></a>
+        <a href="../../png-to-webp/" class="nav-link"><span>PNG → WebP</span></a>
+        <a href="../../heic-to-jpg/" class="nav-link"><span>HEIC → JPG</span></a>
+        <a href="../../avif-to-png/" class="nav-link"><span>AVIF → PNG</span></a>
+        <a href="../../svg-to-png/" class="nav-link"><span>SVG → PNG</span></a>
+        <a href="../../png-to-ico/" class="nav-link"><span>PNG → ICO</span></a>
+      </nav>
+      
+      <div class="sidebar-footer">
+        <span>QuickKit v1.0.0</span>
+      </div>
+    </aside>
+
+    <!-- Main Workspace -->
+    <main class="main-content">
+      <header class="top-nav">
+        <div class="breadcrumb">
+          <a href="../../index.html">QuickKit</a>
+          <span class="breadcrumb-sep">/</span>
+          <span>WebP vs PNG Comparison</span>
+        </div>
+        <div class="top-actions">
+          <button class="btn-command-palette-trigger" id="palette-trigger">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <span>Search utilities</span>
+            <kbd>Ctrl K</kbd>
+          </button>
+        </div>
+      </header>
+
+      <div class="content-body" style="max-width: 800px;">
+        
+        <section class="hero" style="text-align: left; margin-bottom: 32px;">
+          <h1 class="hero-title" style="font-size: 2.8rem;">WebP vs PNG: Which is better?</h1>
+          <p class="hero-subtitle" style="margin: 0; max-width: 100%;">An in-depth look into compression parameters, file size savings, and browser compatibility to help developers pick the right web image formats.</p>
+        </section>
+
+        <article style="font-size: 0.98rem; color: var(--text-secondary); line-height: 1.7; display: flex; flex-direction: column; gap: 20px;">
+          <p>
+            When optimizing site speeds, choosing the right file extensions is critical. Both <strong>PNG</strong> and <strong>WebP</strong> support alpha-channel transparency, making them suitable for UI designs. However, they handle compression in completely different ways.
+          </p>
+
+          <table class="compare-table">
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th>PNG</th>
+                <th>WebP</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Compression Type</strong></td>
+                <td>Lossless only</td>
+                <td>Lossy and Lossless</td>
+              </tr>
+              <tr>
+                <td><strong>Transparency</strong></td>
+                <td><span class="badge badge-primary">Yes</span></td>
+                <td><span class="badge badge-primary">Yes</span></td>
+              </tr>
+              <tr>
+                <td><strong>File Size Efficiency</strong></td>
+                <td>Heavy file sizes</td>
+                <td><span class="badge badge-secondary">30-70% Smaller</span></td>
+              </tr>
+              <tr>
+                <td><strong>Browser Support</strong></td>
+                <td>Universal (100%)</td>
+                <td>Universal (97%+)</td>
+              </tr>
+              <tr>
+                <td><strong>Animations</strong></td>
+                <td>No (APNG exists but rarely used)</td>
+                <td><span class="badge badge-primary">Yes (Animated WebP)</span></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h2 style="font-family: var(--font-title); color: #fff; margin-top: 20px;">When to use PNG</h2>
+          <p>
+            PNG is a lossless format, meaning it doesn't discard details to shrink file sizes. Use PNG for:
+          </p>
+          <ul style="margin-left: 20px; display:flex; flex-direction:column; gap:8px;">
+            <li>High-contrast text mockups and vector screenshots.</li>
+            <li>Artwork containing fine gradient grids that must remain razor-sharp.</li>
+            <li>Images that undergo repeated editing, preventing encoding degradation.</li>
+          </ul>
+
+          <h2 style="font-family: var(--font-title); color: #fff; margin-top: 20px;">When to use WebP</h2>
+          <p>
+            WebP is built specifically to decrease page load times. Use WebP for:
+          </p>
+          <ul style="margin-left: 20px; display:flex; flex-direction:column; gap:8px;">
+            <li>All standard website assets, banners, and blog posts.</li>
+            <li>Transparent site logos where weight is crucial.</li>
+            <li>Replacing heavy animated GIFs to reduce web requests.</li>
+          </ul>
+
+          <!-- Call to action boxes -->
+          <div class="panel" style="margin-top: 40px; background: rgba(124, 58, 237, 0.05); border-color: var(--border-focus); text-align: center; gap: 16px;">
+            <h3 style="font-family: var(--font-title); color: #fff;">Need to switch formats?</h3>
+            <p>Convert your files instantly in your browser memory without uploading anything.</p>
+            <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+              <a href="../../webp-to-png/" class="btn btn-primary">Convert WebP to PNG</a>
+              <a href="../../png-to-webp/" class="btn btn-secondary">Convert PNG to WebP</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- Command Palette Modal -->
+  <div class="command-palette-overlay" id="command-palette-overlay">
+    <div class="command-palette">
+      <div class="command-palette-search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" class="command-palette-input" id="command-input" placeholder="Search QuickKit utilities...">
+      </div>
+      <div class="command-palette-results" id="command-results"></div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script type="module" src="../../js/db.js"></script>
+  <script type="module" src="../../js/app.js"></script>
+</body>
+</html>

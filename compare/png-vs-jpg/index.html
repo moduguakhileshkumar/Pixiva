@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Metadata -->
+  <title>PNG vs JPG - When to Use Transparent PNG or Lightweight JPG | QuickKit</title>
+  <meta name="description" content="Detailed PNG and JPG comparison. Learn which format fits web designs, photo sizes, transparency support, and quality preservation.">
+  <meta name="keywords" content="png vs jpg, jpg vs png, transparent png, lossy jpeg, web image formatting">
+  <meta name="robots" content="index, follow">
+
+  <link rel="icon" type="image/png" href="https://img.icons8.com/neon/96/000000/wrench.png">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 32px 0;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+    }
+    .compare-table th, .compare-table td {
+      padding: 16px 20px;
+      text-align: left;
+      font-size: 0.9rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .compare-table th {
+      background: rgba(255,255,255,0.03);
+      font-weight: 700;
+      font-family: var(--font-title);
+      color: #fff;
+    }
+    .compare-table tr:last-child td {
+      border-bottom: none;
+    }
+    .badge {
+      display: inline-block;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    .badge-primary { background: var(--color-primary-glow); color: #c084fc; }
+    .badge-secondary { background: var(--color-secondary-glow); color: #22d3ee; }
+  </style>
+</head>
+<body>
+
+  <div class="app-container">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <a href="../../index.html" class="logo">
+          <i class="fa-solid fa-bolt"></i>
+          <span>QuickKit</span>
+        </a>
+      </div>
+      
+      <nav class="sidebar-nav">
+        <div class="nav-section-title">Workspace Tools</div>
+        <a href="../../image-compressor/" class="nav-link">
+          <i class="fa-solid fa-minimize"></i>
+          <span>Image Compressor</span>
+        </a>
+        <a href="../../image-resizer/" class="nav-link">
+          <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+          <span>Image Resizer</span>
+        </a>
+        
+        <div class="nav-section-title">Converters</div>
+        <a href="../../webp-to-png/" class="nav-link"><span>WebP → PNG</span></a>
+        <a href="../../png-to-webp/" class="nav-link"><span>PNG → WebP</span></a>
+        <a href="../../heic-to-jpg/" class="nav-link"><span>HEIC → JPG</span></a>
+        <a href="../../avif-to-png/" class="nav-link"><span>AVIF → PNG</span></a>
+        <a href="../../svg-to-png/" class="nav-link"><span>SVG → PNG</span></a>
+        <a href="../../png-to-ico/" class="nav-link"><span>PNG → ICO</span></a>
+      </nav>
+      
+      <div class="sidebar-footer">
+        <span>QuickKit v1.0.0</span>
+      </div>
+    </aside>
+
+    <!-- Main Workspace -->
+    <main class="main-content">
+      <header class="top-nav">
+        <div class="breadcrumb">
+          <a href="../../index.html">QuickKit</a>
+          <span class="breadcrumb-sep">/</span>
+          <span>PNG vs JPG Comparison</span>
+        </div>
+        <div class="top-actions">
+          <button class="btn-command-palette-trigger" id="palette-trigger">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <span>Search utilities</span>
+            <kbd>Ctrl K</kbd>
+          </button>
+        </div>
+      </header>
+
+      <div class="content-body" style="max-width: 800px;">
+        
+        <section class="hero" style="text-align: left; margin-bottom: 32px;">
+          <h1 class="hero-title" style="font-size: 2.8rem;">PNG vs JPG: Detailed Comparison</h1>
+          <p class="hero-subtitle" style="margin: 0; max-width: 100%;">Understand the core parameters of PNG and JPG formats to improve user experiences and site speed budgets.</p>
+        </section>
+
+        <article style="font-size: 0.98rem; color: var(--text-secondary); line-height: 1.7; display: flex; flex-direction: column; gap: 20px;">
+          <p>
+            The choice between <strong>PNG</strong> and <strong>JPG</strong> (JPEG) is one of the oldest design decisions. While both formats have been web standards for decades, they serve entirely opposite use cases.
+          </p>
+
+          <table class="compare-table">
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th>PNG</th>
+                <th>JPG / JPEG</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Compression Type</strong></td>
+                <td>Lossless (no quality loss)</td>
+                <td>Lossy (discards detail)</td>
+              </tr>
+              <tr>
+                <td><strong>Transparency</strong></td>
+                <td><span class="badge badge-primary">Yes</span></td>
+                <td><span class="badge badge-secondary" style="background:rgba(239, 68, 68, 0.1); color:#fca5a5;">No</span></td>
+              </tr>
+              <tr>
+                <td><strong>Ideal Content</strong></td>
+                <td>Graphics, screenshots, text</td>
+                <td>Photographs, colorful banners</td>
+              </tr>
+              <tr>
+                <td><strong>Average File Size</strong></td>
+                <td>Heavy</td>
+                <td><span class="badge badge-secondary">Lightweight</span></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h2 style="font-family: var(--font-title); color: #fff; margin-top: 20px;">When to choose PNG</h2>
+          <p>
+            Choose PNG when you require transparency and cannot afford compression artifacts. This includes website logos, graphics with crisp margins, software screenshots, and icons.
+          </p>
+
+          <h2 style="font-family: var(--font-title); color: #fff; margin-top: 20px;">When to choose JPG</h2>
+          <p>
+            Choose JPG when saving photos or complex landscape images. JPG sacrifices microscopic color information to save massive amounts of data, leading to lightweight files that load instantly.
+          </p>
+
+          <div class="panel" style="margin-top: 40px; background: rgba(124, 58, 237, 0.05); border-color: var(--border-focus); text-align: center; gap: 16px;">
+            <h3 style="font-family: var(--font-title); color: #fff;">Convert files instantly</h3>
+            <p>Switch formats locally in your web browser memory. No files are uploaded to any server.</p>
+            <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+              <a href="../../webp-to-png/" class="btn btn-primary">Go to Converter</a>
+              <a href="../../image-compressor/" class="btn btn-secondary">Compress Images</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- Command Palette Modal -->
+  <div class="command-palette-overlay" id="command-palette-overlay">
+    <div class="command-palette">
+      <div class="command-palette-search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" class="command-palette-input" id="command-input" placeholder="Search QuickKit utilities...">
+      </div>
+      <div class="command-palette-results" id="command-results"></div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script type="module" src="../../js/db.js"></script>
+  <script type="module" src="../../js/app.js"></script>
+</body>
+</html>
