@@ -247,7 +247,7 @@ export function initConverter(presetSource = null, presetTarget = null) {
     const baseName = item.file.name.substring(0, item.file.name.lastIndexOf('.')) || 'image';
     const link = document.createElement('a');
     link.href = URL.createObjectURL(item.outputBlob);
-    link.download = `quickkit-${baseName}.${targetFormat}`;
+    link.download = `pixiva-${baseName}.${targetFormat}`;
 
     document.body.appendChild(link);
     link.click();

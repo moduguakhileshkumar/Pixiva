@@ -232,7 +232,7 @@ export function initCompressor() {
 
       const ext = activeFile.type === 'image/webp' ? 'webp' : 'jpg';
       const baseName = activeFile.name.substring(0, activeFile.name.lastIndexOf('.')) || 'image';
-      link.download = `quickkit-compressed-${baseName}.${ext}`;
+      link.download = `pixiva-compressed-${baseName}.${ext}`;
 
       document.body.appendChild(link);
       link.click();

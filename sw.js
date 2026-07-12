@@ -1,4 +1,4 @@
-const CACHE_NAME = 'quickkit-cache-v1';
+const CACHE_NAME = 'pixiva-cache-v1';
 const ASSETS = [
   '/',
   '/index.html',

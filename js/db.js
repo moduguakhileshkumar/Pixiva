@@ -4,7 +4,7 @@ export function initDB() {
   return new Promise((resolve, reject) => {
     if (db) return resolve(db);
 
-    const request = indexedDB.open('QuickKitDB', 1);
+    const request = indexedDB.open('PixivaDB', 1);
 
     request.onupgradeneeded = (e) => {
       const database = e.target.result;

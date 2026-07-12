@@ -7,8 +7,8 @@ export const tools = [
     category: "optimization",
     icon: "fa-minimize",
     faq: [
-      { q: "Is my image uploaded to any server?", a: "No. QuickKit operates 100% locally in your browser memory. Your files are never sent to a server." },
-      { q: "Will I lose image quality?", a: "QuickKit uses canvas resampling and smart variable quality compressions. You can adjust the quality slider and preview output details in real-time." }
+      { q: "Is my image uploaded to any server?", a: "No. Pixiva operates 100% locally in your browser memory. Your files are never sent to a server." },
+      { q: "Will I lose image quality?", a: "Pixiva uses canvas resampling and smart variable quality compressions. You can adjust the quality slider and preview output details in real-time." }
     ]
   },
   {
@@ -19,7 +19,7 @@ export const tools = [
     category: "optimization",
     icon: "fa-up-right-and-down-left-from-center",
     faq: [
-      { q: "Can I resize files other than PNG?", a: "Yes. QuickKit supports resizing JPG, PNG, WebP, and AVIF image formats natively in the browser." },
+      { q: "Can I resize files other than PNG?", a: "Yes. Pixiva supports resizing JPG, PNG, WebP, and AVIF image formats natively in the browser." },
       { q: "Does locking aspect ratio prevent distortion?", a: "Yes. Keeping aspect ratios locked guarantees that when you adjust width, height scales proportionally to prevent squishing." }
     ]
   },
@@ -104,7 +104,7 @@ export const tools = [
     icon: "fa-arrow-right-arrow-left",
     faq: [
       { q: "What is an ICO file used for?", a: "ICO is the file format used for site favicons that display in browser tabs and bookmark bars." },
-      { q: "What sizes are included?", a: "QuickKit packs standard multi-resolution blocks (16x16, 32x32) into the compiled ICO structure." }
+      { q: "What sizes are included?", a: "Pixiva packs standard multi-resolution blocks (16x16, 32x32) into the compiled ICO structure." }
     ]
   }
 ];

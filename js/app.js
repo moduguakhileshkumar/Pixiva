@@ -69,7 +69,7 @@ function initFavorites() {
   if (!favoritesContainer) return;
 
   function renderFavorites() {
-    let favSlugs = JSON.parse(localStorage.getItem('quickkit_favs') || '[]');
+    let favSlugs = JSON.parse(localStorage.getItem('pixiva_favs') || '[]');
     favoritesContainer.innerHTML = '';
 
     if (favSlugs.length === 0) {
@@ -101,7 +101,7 @@ function initFavorites() {
 
   // Expose toggle favorite method globally on window so HTML elements can call it
   window.toggleFavorite = function(slug, btnElement) {
-    let favSlugs = JSON.parse(localStorage.getItem('quickkit_favs') || '[]');
+    let favSlugs = JSON.parse(localStorage.getItem('pixiva_favs') || '[]');
     const idx = favSlugs.indexOf(slug);
 
     if (idx >= 0) {
@@ -114,7 +114,7 @@ function initFavorites() {
       showToast('Added to favorites!');
     }
 
-    localStorage.setItem('quickkit_favs', JSON.stringify(favSlugs));
+    localStorage.setItem('pixiva_favs', JSON.stringify(favSlugs));
     renderFavorites();
   };
 

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://quickkit.io/sitemap.xml
+Sitemap: https://pixiva.io/sitemap.xml
