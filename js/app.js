@@ -382,11 +382,10 @@ function getToolUrl(slug) {
   const pathDepth = window.location.pathname.split('/').filter(p => p.length > 0);
   const depth = pathDepth.length;
   let prefix = './';
-  if (pathDepth.includes('compare') || pathDepth.includes('webp-to-png') || pathDepth.includes('png-to-webp') || pathDepth.includes('heic-to-jpg') || pathDepth.includes('avif-to-png') || pathDepth.includes('svg-to-png') || pathDepth.includes('png-to-ico') || pathDepth.includes('image-compressor') || pathDepth.includes('image-resizer')) {
+  if (depth === 1) {
     prefix = '../';
-    if (pathDepth.includes('compare')) {
-      prefix = '../../';
-    }
+  } else if (depth === 2) {
+    prefix = '../../';
   }
   return `${prefix}${slug}/`;
 }

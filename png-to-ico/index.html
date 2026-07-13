@@ -108,6 +108,14 @@
           <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
           <span>Image Resizer</span>
         </a>
+        <a href="../image-blur/" class="nav-link ">
+          <i class="fa-solid fa-eye-slash"></i>
+          <span>Focal Blur Editor</span>
+        </a>
+        <a href="../color-picker/" class="nav-link ">
+          <i class="fa-solid fa-eye-dropper"></i>
+          <span>Color Picker</span>
+        </a>
         
         <div class="nav-section-title">Converters</div>
         <a href="../webp-to-png/" class="nav-link "><span>WebP → PNG</span></a>
@@ -119,6 +127,15 @@
         <a href="../jpg-to-png/" class="nav-link "><span>JPG → PNG</span></a>
         <a href="../png-to-jpg/" class="nav-link "><span>PNG → JPG</span></a>
         <a href="../webp-to-jpg/" class="nav-link "><span>WebP → JPG</span></a>
+
+        <div class="nav-section-title">Developer Tools</div>
+        <a href="../json-formatter/" class="nav-link "><span>JSON Formatter</span></a>
+        <a href="../jwt-decoder/" class="nav-link "><span>JWT Decoder</span></a>
+        <a href="../markdown-editor/" class="nav-link "><span>Markdown Editor</span></a>
+        <a href="../qr-toolkit/" class="nav-link "><span>QR Toolkit</span></a>
+        <a href="../text-cleaner/" class="nav-link "><span>Text Cleaner</span></a>
+        <a href="../timestamp-converter/" class="nav-link "><span>Timestamp Conv</span></a>
+        <a href="../unit-converter/" class="nav-link "><span>Unit Converter</span></a>
       </nav>
       
       <div class="media-shelf">
@@ -280,44 +297,64 @@
 
         <!-- Unified Footer -->
         <footer class="app-footer">
-          <div class="footer-row">
-            <div class="footer-column" style="flex: 2; min-width: 250px;">
+          <div class="footer-row" style="align-items: flex-start;">
+            <div class="footer-column" style="flex: 2; min-width: 200px;">
               <a href="../index.html" class="footer-brand">
                 <i class="fa-solid fa-bolt" style="color:var(--color-primary);"></i>
                 <span>Pixiva</span>
               </a>
-              <p style="font-size:0.78rem; color:var(--text-muted); line-height:1.6; margin-top:8px;">
-                All image processing happens locally in your browser. No uploads, no tracking of your files, no servers involved.
+              <p style="font-size:0.75rem; color:var(--text-muted); line-height:1.6; margin-top:8px;">
+                All utility calculations and conversions occur purely inside your local browser sandbox. Complete privacy assured.
               </p>
-              <a href="https://github.com/" target="_blank" class="footer-link" style="margin-top: 12px; font-size: 0.78rem;">
+              <a href="https://github.com/" target="_blank" class="footer-link" style="margin-top: 12px; font-size: 0.72rem;">
                 <i class="fa-brands fa-github"></i> ⭐ Open Source Components
               </a>
             </div>
+            
             <div class="footer-column">
-              <h4>Workspace</h4>
+              <h4>Graphics & Icons</h4>
               <a href="../image-compressor/" class="footer-link">Image Compressor</a>
               <a href="../image-resizer/" class="footer-link">Image Resizer</a>
+              <a href="../image-blur/" class="footer-link">Focal Blur Editor</a>
+              <a href="../color-picker/" class="footer-link">Color Picker</a>
+              <a href="../favicon-generator/" class="footer-link">Favicon Generator</a>
             </div>
+
             <div class="footer-column">
               <h4>Converters</h4>
               <a href="../webp-to-png/" class="footer-link">WebP → PNG</a>
               <a href="../png-to-webp/" class="footer-link">PNG → WebP</a>
               <a href="../heic-to-jpg/" class="footer-link">HEIC → JPG</a>
               <a href="../jpg-to-png/" class="footer-link">JPG → PNG</a>
+              <a href="../png-to-jpg/" class="footer-link">PNG → JPG</a>
+              <a href="../webp-to-jpg/" class="footer-link">WebP → JPG</a>
             </div>
+
             <div class="footer-column">
+              <h4>Dev Utilities</h4>
+              <a href="../json-formatter/" class="footer-link">JSON Formatter</a>
+              <a href="../jwt-decoder/" class="footer-link">JWT Decoder</a>
+              <a href="../markdown-editor/" class="footer-link">Markdown Editor</a>
+              <a href="../qr-toolkit/" class="footer-link">QR Toolkit</a>
+              <a href="../text-cleaner/" class="footer-link">Text Cleaner</a>
+              <a href="../timestamp-converter/" class="footer-link">Timestamp Conv</a>
+              <a href="../unit-converter/" class="footer-link">Unit Converter</a>
+            </div>
+
+            <div class="footer-column" style="min-width: 120px;">
               <h4>Resources</h4>
               <a href="../compare/webp-vs-png/" class="footer-link">Compare Formats</a>
+              <a href="../about/" class="footer-link">About Pixiva</a>
+              <a href="../contact/" class="footer-link">Contact</a>
               <a href="../privacy/" class="footer-link">Privacy Policy</a>
               <a href="../terms/" class="footer-link">Terms of Service</a>
-              <a href="../contact/" class="footer-link">Contact</a>
             </div>
           </div>
           
-          <div class="footer-row" style="border-top: 1px solid var(--border-color); padding-top: 20px; margin-top: 10px;">
-            <div style="font-size: 0.78rem; color: var(--text-muted); line-height: 1.6;">
-              <strong style="color: #fff; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.5px; display: block; margin-bottom: 6px;">Supported Formats</strong>
-              PNG • JPG • JPEG • WebP • AVIF • HEIC • SVG • ICO
+          <div class="footer-row" style="border-top: 1px solid var(--border-color); padding-top: 20px; margin-top: 15px;">
+            <div style="font-size: 0.75rem; color: var(--text-muted); line-height: 1.6;">
+              <strong style="color: #fff; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.5px; display: block; margin-bottom: 6px;">Supported File Engines</strong>
+              PNG • JPG • JPEG • WebP • AVIF • HEIC • SVG • ICO • JSON • JWT • Markdown • QR
             </div>
           </div>
 

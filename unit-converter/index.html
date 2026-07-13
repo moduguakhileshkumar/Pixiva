@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <!-- SEO Metadata -->
-  <title>Convert AVIF to PNG Online - Free & Private | Pixiva</title>
-  <meta name="description" content="Convert AVIF images to transparent PNG files locally in your web browser. 100% secure, free, batch conversion supported.">
-  <meta name="keywords" content="avif to png, convert avif, free avif to png converter, avif image converter, local image converter">
+  <title>Universal Unit Converter Online - Convert Length, Weight | Pixiva</title>
+  <meta name="description" content="Convert lengths, weights, and temperature units locally in your web browser. 100% private, free.">
+  <meta name="keywords" content="unit converter, length converter, weight converter, temp converter, local conversion calculator">
   <meta name="robots" content="index, follow">
   <meta name="google-site-verification" content="hMkvLYmRffI9Dj-gbPiLgS6iQeeUMunP_2vUq1-uCRQ" />
 
@@ -25,13 +25,13 @@
     "@graph": [
       {
         "@type": "WebApplication",
-        "@id": "https://pixiva.pages.dev/avif-to-png/#webapp",
-        "url": "https://pixiva.pages.dev/avif-to-png/",
-        "name": "Convert AVIF to PNG Offline Converter",
-        "applicationCategory": "MultimediaApplication",
+        "@id": "https://pixiva.pages.dev/unit-converter/#webapp",
+        "url": "https://pixiva.pages.dev/unit-converter/",
+        "name": "Universal Unit Converter",
+        "applicationCategory": "DeveloperApplication",
         "operatingSystem": "All",
         "browserRequirements": "Requires JavaScript",
-        "description": "Convert AVIF images to transparent PNG files locally in your web browser. 100% secure, free, batch conversion supported.",
+        "description": "Convert lengths, weights, and temperature units locally in your web browser. 100% private, free.",
         "offers": {
           "@type": "Offer",
           "price": "0",
@@ -40,7 +40,7 @@
       },
       {
         "@type": "BreadcrumbList",
-        "@id": "https://pixiva.pages.dev/avif-to-png/#breadcrumb",
+        "@id": "https://pixiva.pages.dev/unit-converter/#breadcrumb",
         "itemListElement": [
           {
             "@type": "ListItem",
@@ -51,30 +51,8 @@
           {
             "@type": "ListItem",
             "position": 2,
-            "name": "AVIF to PNG",
-            "item": "https://pixiva.pages.dev/avif-to-png/"
-          }
-        ]
-      },
-      {
-        "@type": "FAQPage",
-        "@id": "https://pixiva.pages.dev/avif-to-png/#faq",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Why should I convert AVIF to PNG?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "AVIF is a modern high-compression image format, but it is not supported in legacy web browsers, image editors, or older operating systems. Converting AVIF to PNG yields a lossless, universally compatible image."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Is my image quality preserved?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes, converting AVIF to PNG uses lossless canvas rendering. The output PNG file preserves the original colors and transparency without adding compression artifacts."
-            }
+            "name": "Universal Unit Converter",
+            "item": "https://pixiva.pages.dev/unit-converter/"
           }
         ]
       }
@@ -121,7 +99,7 @@
         <a href="../webp-to-png/" class="nav-link "><span>WebP → PNG</span></a>
         <a href="../png-to-webp/" class="nav-link "><span>PNG → WebP</span></a>
         <a href="../heic-to-jpg/" class="nav-link "><span>HEIC → JPG</span></a>
-        <a href="../avif-to-png/" class="nav-link active"><span>AVIF → PNG</span></a>
+        <a href="../avif-to-png/" class="nav-link "><span>AVIF → PNG</span></a>
         <a href="../svg-to-png/" class="nav-link "><span>SVG → PNG</span></a>
         <a href="../png-to-ico/" class="nav-link "><span>PNG → ICO</span></a>
         <a href="../jpg-to-png/" class="nav-link "><span>JPG → PNG</span></a>
@@ -135,7 +113,7 @@
         <a href="../qr-toolkit/" class="nav-link "><span>QR Toolkit</span></a>
         <a href="../text-cleaner/" class="nav-link "><span>Text Cleaner</span></a>
         <a href="../timestamp-converter/" class="nav-link "><span>Timestamp Conv</span></a>
-        <a href="../unit-converter/" class="nav-link "><span>Unit Converter</span></a>
+        <a href="../unit-converter/" class="nav-link active"><span>Unit Converter</span></a>
       </nav>
       
       <div class="media-shelf">
@@ -159,8 +137,7 @@
         <div class="breadcrumb">
           <a href="../index.html">Pixiva</a>
           <span class="breadcrumb-sep">/</span>
-          <span>AVIF to PNG</span>
-          <button class="btn-fav-star" onclick="toggleFavorite('avif-to-png', this)" title="Toggle Favorite" style="margin-left: 8px;"><i class="fa-solid fa-star"></i></button>
+          <span>Universal Unit Converter</span>
         </div>
         <div class="top-actions">
           <button class="btn-command-palette-trigger" id="palette-trigger">
@@ -174,8 +151,8 @@
       <div class="content-body">
         
         <section class="hero">
-          <h1 class="hero-title">Convert AVIF to PNG</h1>
-          <p class="hero-subtitle">Convert next-gen AVIF images back into lossless, universally-compatible PNG files locally in browser memory.</p>
+          <h1 class="hero-title">Universal Unit Converter</h1>
+          <p class="hero-subtitle">Calculate scale transformations for metrics and imperial measurements client-side.</p>
           <div class="privacy-badge">
             <i class="fa-solid fa-shield-halved"></i> 100% Client-Side
           </div>
@@ -196,96 +173,74 @@
           </div>
         </section>
 
-        <!-- Dropzone -->
-        <div class="workspace-dropzone" id="converter-dropzone" style="cursor: default;">
-          <div class="dropzone-icon-wrapper">
-            <i class="fa-solid fa-arrow-right-arrow-left"></i>
+        <!-- Tool Input and Control Viewport -->
+        
+        <div class="panel">
+          <h2 class="panel-title"><i class="fa-solid fa-scale-balanced"></i> Universal Unit Converter</h2>
+          <div style="display: flex; flex-direction: column; gap: 20px;">
+            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px;">
+              <div class="form-group">
+                <label class="form-label">Select Dimension</label>
+                <select id="select-unit-type" class="form-control" style="background:#000; border-color:var(--border-color);">
+                  <option value="length">Length</option>
+                  <option value="weight">Weight / Mass</option>
+                  <option value="temp">Temperature</option>
+                </select>
+              </div>
+              
+              <div class="form-group">
+                <label class="form-label">From Unit</label>
+                <select id="select-unit-from" class="form-control" style="background:#000; border-color:var(--border-color);"></select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">To Unit</label>
+                <select id="select-unit-to" class="form-control" style="background:#000; border-color:var(--border-color);"></select>
+              </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+              <div class="form-group">
+                <label class="form-label">Input Value</label>
+                <input type="number" id="input-unit-value" class="form-control" value="1" style="background:#000; color:#fff;">
+              </div>
+              
+              <div class="form-group">
+                <label class="form-label">Converted Value</label>
+                <input type="text" id="output-unit-value" class="form-control" readonly style="background:#000; color:#fff; font-family: monospace;">
+              </div>
+            </div>
           </div>
-          <h2>Drag & drop your AVIF files or <a href="javascript:void(0);" onclick="document.getElementById('converter-file-input').click();" style="color: var(--color-primary); text-decoration: underline;">Browse Files</a></h2>
-          <p>Press <kbd>Ctrl + V</kbd> to paste a screenshot directly</p>
-          <input type="file" id="converter-file-input" style="display: none;" accept=".avif" multiple>
         </div>
-
-        <!-- Compatibility Status Bar -->
-        <div class="compatibility-status-bar" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; max-width: 600px; margin: 24px auto; background: rgba(255,255,255,0.01); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 12px;">
-          <div style="text-align: center; border-right: 1px solid var(--border-color);">
-            <div style="font-size: 0.65rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700; letter-spacing: 0.5px;">Supports</div>
-            <div style="font-size: 0.8rem; font-weight: 700; color: #fff; margin-top: 4px;">AVIF format</div>
-          </div>
-          <div style="text-align: center; border-right: 1px solid var(--border-color);">
-            <div style="font-size: 0.65rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700; letter-spacing: 0.5px;">Operations</div>
-            <div style="font-size: 0.8rem; font-weight: 700; color: var(--color-success); margin-top: 4px;"><i class="fa-solid fa-circle-check"></i> 100% Offline</div>
-          </div>
-          <div style="text-align: center;">
-            <div style="font-size: 0.65rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700; letter-spacing: 0.5px;">Privacy</div>
-            <div style="font-size: 0.8rem; font-weight: 700; color: var(--color-success); margin-top: 4px;"><i class="fa-solid fa-shield-halved"></i> No Uploads</div>
-          </div>
-        </div>
-
-        <!-- Active Workspace -->
-        <section class="active-workspace" id="active-workspace">
-          <div class="panel">
-            <h2 class="panel-title"><i class="fa-solid fa-gears"></i> Batch Operations Queue</h2>
-            
-            <div class="form-group" style="display: none;">
-              <!-- Hidden or hardcoded target select for presets -->
-              <input type="hidden" id="converter-target-format" value="png">
-            </div>
-
-            <div class="batch-list" id="batch-list">
-              <!-- Rendered in JS -->
-            </div>
-
-            <div class="form-group" style="margin-top: 20px;">
-              <button class="btn btn-primary" id="btn-convert-all" style="width: 100%;">
-                <i class="fa-solid fa-gears"></i> Convert All & Save
-              </button>
-            </div>
-          </div>
-        </section>
+    
 
         <!-- Tool workspace footer ad -->
         <div class="ad-placeholder"></div>
 
         <!-- SEO Article & Guide -->
         <section class="faq-section" style="margin-top: 60px;">
-          <h2 class="faq-title" style="text-align: left; margin-bottom: 20px;">Everything about converting AVIF to PNG</h2>
-          <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 24px;">
-            AVIF is a high-compression image format, but it lacks support in older operating systems, email clients, and image viewers. Converting AVIF to PNG yields a lossless, compatible image with all alpha transparency channels preserved.
-          </p>
-
-          <h3 style="font-size: 1.2rem; font-family: var(--font-title); margin-bottom: 12px;">AVIF vs PNG: What is the difference?</h3>
-          <div class="batch-list" style="margin-bottom: 30px;">
-            <div class="pipeline-step-item">
-              <span><strong>AVIF:</strong> Optimized for specific file properties client side.</span>
-            </div>
-            <div class="pipeline-step-item">
-              <span><strong>PNG:</strong> Lossless target formats operating directly in browser cache.</span>
-            </div>
-          </div>
-
-          <h2 class="faq-title">Frequently Asked Questions</h2>
+          <h2 class="faq-title" style="text-align: left; margin-bottom: 20px;">Frequently Asked Questions</h2>
           <div class="faq-grid">
             <div class="faq-card">
               <div class="faq-header">
-                <span>Why should I convert AVIF to PNG?</span>
+                <span>Is it safe to use this tool on Pixiva?</span>
                 <i class="fa-solid fa-chevron-down"></i>
               </div>
               <div class="faq-body">
                 <div class="faq-content">
-                  AVIF is a modern high-compression image format, but it is not supported in legacy web browsers, image editors, or older operating systems. Converting AVIF to PNG yields a lossless, universally compatible image.
+                  Yes, it is completely secure. Traditional tools process your data on remote servers, which can compromise privacy. Pixiva performs all formatting, decoding, and rendering locally in your browser memory. Your data never leaves your device.
                 </div>
               </div>
             </div>
 
             <div class="faq-card">
               <div class="faq-header">
-                <span>Is my image quality preserved?</span>
+                <span>Can I use this tool offline?</span>
                 <i class="fa-solid fa-chevron-down"></i>
               </div>
               <div class="faq-body">
                 <div class="faq-content">
-                  Yes, converting AVIF to PNG uses lossless canvas rendering. The output PNG file preserves the original colors and transparency without adding compression artifacts.
+                  Yes. Once the page is loaded, the service worker caches the scripts and styles locally. You can use all developer calculators, decoders, and generators offline without any internet connection.
                 </div>
               </div>
             </div>
@@ -391,8 +346,8 @@
   <script type="module" src="../js/db.js"></script>
   <script type="module" src="../js/app.js"></script>
   <script type="module">
-    import { initConverter } from '../js/tools/converter.js';
-    initConverter('avif', 'png');
+    import { initUnitConverter } from '../js/tools/unitConverter.js';
+    initUnitConverter();
   </script>
 </body>
 </html>

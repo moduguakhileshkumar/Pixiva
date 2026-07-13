@@ -106,5 +106,126 @@ export const tools = [
       { q: "What is an ICO file used for?", a: "ICO is the file format used for site favicons that display in browser tabs and bookmark bars." },
       { q: "What sizes are included?", a: "Pixiva packs standard multi-resolution blocks (16x16, 32x32) into the compiled ICO structure." }
     ]
+  },
+  {
+    slug: "color-picker",
+    name: "Color Picker",
+    title: "Image Color Picker - Extract Hex Codes Online",
+    description: "Extract RGB and HEX color codes from uploaded images locally in browser memory.",
+    category: "utility",
+    icon: "fa-eye-dropper",
+    faq: [
+      { q: "Can I save colors?", a: "Yes, you can save colors to a temporary visual palette and copy them as hex strings." }
+    ]
+  },
+  {
+    slug: "favicon-generator",
+    name: "Favicon Generator",
+    title: "Favicon Generator - Convert PNG to ICO Favicons",
+    description: "Create ICO favicons and PWA touch icons from standard square PNG files locally.",
+    category: "utility",
+    icon: "fa-image",
+    faq: [
+      { q: "What files should I upload?", a: "A square transparent PNG (e.g. 512x512) is highly recommended for best results." }
+    ]
+  },
+  {
+    slug: "image-blur",
+    name: "Focal Blur Editor",
+    title: "Image Blur Editor - Reposition Focus and Blurs",
+    description: "Add focal blurs and custom visual depth adjustments to images in real-time.",
+    category: "utility",
+    icon: "fa-eye-slash",
+    faq: [
+      { q: "How do I set the focus point?", a: "Simply click anywhere on the loaded image canvas to reposition the focus core." }
+    ]
+  },
+  {
+    slug: "invoice-generator",
+    name: "Invoice Generator",
+    title: "Invoice Generator - Quick Free PDF Invoices",
+    description: "Generate customizable PDF invoice drafts instantly without server uploads.",
+    category: "utility",
+    icon: "fa-file-invoice-dollar",
+    faq: [
+      { q: "Is this secure?", a: "Yes, your client name and financial figures are compiled purely in client memory and never uploaded." }
+    ]
+  },
+  {
+    slug: "json-formatter",
+    name: "JSON Formatter & Validator",
+    title: "JSON Formatter - Beautify and Minify JSON strings",
+    description: "Format, validate, beautify, and minify raw JSON string code locally.",
+    category: "developer",
+    icon: "fa-code",
+    faq: [
+      { q: "Will this validate syntax errors?", a: "Yes, it provides immediate red error validation badges describing missing commas or brackets." }
+    ]
+  },
+  {
+    slug: "jwt-decoder",
+    name: "JWT Decoder",
+    title: "JWT Token Decoder - View JSON Web Token Claims",
+    description: "Parse header information and payload data from JSON Web Tokens (JWT) locally.",
+    category: "developer",
+    icon: "fa-key",
+    faq: [
+      { q: "Are secret keys safe?", a: "Yes. Pixiva decodes raw base64 token blocks on your browser thread. No secrets leave your screen." }
+    ]
+  },
+  {
+    slug: "markdown-editor",
+    name: "Markdown Editor",
+    title: "Markdown Editor - Live Preview & HTML Export",
+    description: "Write markup files with real-time browser preview layouts and export to HTML files.",
+    category: "developer",
+    icon: "fa-file-pen",
+    faq: [
+      { q: "Can I download the HTML?", a: "Yes, click 'Save HTML' to download the compiled HTML page instantly." }
+    ]
+  },
+  {
+    slug: "qr-toolkit",
+    name: "QR Code Toolkit",
+    title: "QR Code Generator - Convert Text or URLs to QRs",
+    description: "Generate custom dot color QR code graphics and download images locally.",
+    category: "utility",
+    icon: "fa-qrcode",
+    faq: [
+      { q: "Can I change the color?", a: "Yes, pick any hex color to match your branding dots." }
+    ]
+  },
+  {
+    slug: "text-cleaner",
+    name: "Text Cleaner & Case Converter",
+    title: "Text Cleaner - UPPERCASE, lowercase, Trim & Strip",
+    description: "Convert string cases, trim spaces, and strip HTML tags client-side.",
+    category: "text",
+    icon: "fa-wand-magic-sparkles",
+    faq: [
+      { q: "Does it support tag stripping?", a: "Yes, it strips all standard XML/HTML brackets and elements instantly." }
+    ]
+  },
+  {
+    slug: "timestamp-converter",
+    name: "Unix Timestamp Converter",
+    title: "Unix Timestamp Converter - Convert Epoch to Date",
+    description: "Convert timestamps to UTC/ISO date structures and back in browser cache.",
+    category: "developer",
+    icon: "fa-calendar-days",
+    faq: [
+      { q: "What unit is supported?", a: "It converts standard 10-digit Unix timestamps (in seconds)." }
+    ]
+  },
+  {
+    slug: "unit-converter",
+    name: "Universal Unit Converter",
+    title: "Universal Unit Converter - Convert Metric and Imperial",
+    description: "Calculate measurements and dimension conversions for lengths and weights locally.",
+    category: "developer",
+    icon: "fa-scale-balanced",
+    faq: [
+      { q: "What units are supported?", a: "Length (m, km, ft, in), Weight (kg, g, lb, oz), and Temp (C, F, K)." }
+    ]
   }
 ];
