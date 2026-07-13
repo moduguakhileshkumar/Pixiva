@@ -6,15 +6,81 @@
   
   <!-- SEO Metadata -->
   <title>Convert HEIC to JPG Online - Free iPhone Photo Converter | Pixiva</title>
-  <meta name="description" content="Convert Apple HEIC photos to compatible JPG format locally in your web browser. 100% private, free, batch conversion of iPhone photos supported.">
-  <meta name="keywords" content="heic to jpg, convert heic, heic to jpeg, free heic to jpg converter, batch convert iphone photos">
+  <meta name="description" content="Convert Apple HEIC photos from iPhone to standard JPEGs locally in your web browser. 100% secure, free, batch conversion supported.">
+  <meta name="keywords" content="heic to jpg, convert heic, heic converter, iphone photo to jpg, local heic to jpg">
   <meta name="robots" content="index, follow">
+  <meta name="google-site-verification" content="hMkvLYmRffI9Dj-gbPiLgS6iQeeUMunP_2vUq1-uCRQ" />
 
-  <link class="favicon" rel="icon" type="image/png" href="https://img.icons8.com/neon/96/000000/wrench.png">
+  <link rel="icon" type="image/png" href="https://img.icons8.com/neon/96/000000/wrench.png">
+  <link rel="manifest" href="../manifest.json">
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://pixiva.pages.dev/heic-to-jpg/#webapp",
+        "url": "https://pixiva.pages.dev/heic-to-jpg/",
+        "name": "Convert HEIC to JPG Offline Converter",
+        "applicationCategory": "MultimediaApplication",
+        "operatingSystem": "All",
+        "browserRequirements": "Requires JavaScript",
+        "description": "Convert Apple HEIC photos from iPhone to standard JPEGs locally in your web browser. 100% secure, free, batch conversion supported.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://pixiva.pages.dev/heic-to-jpg/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Pixiva",
+            "item": "https://pixiva.pages.dev/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "HEIC to JPG",
+            "item": "https://pixiva.pages.dev/heic-to-jpg/"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://pixiva.pages.dev/heic-to-jpg/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Can I convert iPhone HEIC photos to JPG?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, absolutely. Pixiva natively decodes raw Apple HEIC camera blobs using a local decoder script inside your browser. It formats them to standard JPG/JPEG images which are readable on all systems."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Will my HEIC metadata be kept?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Because conversion is performed using canvas image rasterization client-side, embedded EXIF metadata (like GPS or camera settings) is stripped to protect your privacy and reduce file size."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -30,6 +96,9 @@
       </div>
       
       <nav class="sidebar-nav">
+        <!-- Favorites dynamic section -->
+        <div id="favorites-nav-section" style="display: none;"></div>
+
         <div class="nav-section-title">Workspace Tools</div>
         <a href="../image-compressor/" class="nav-link">
           <i class="fa-solid fa-minimize"></i>
@@ -41,12 +110,12 @@
         </a>
         
         <div class="nav-section-title">Converters</div>
-        <a href="../webp-to-png/" class="nav-link"><span>WebP → PNG</span></a>
-        <a href="../png-to-webp/" class="nav-link"><span>PNG → WebP</span></a>
-        <a href="./" class="nav-link active"><span>HEIC → JPG</span></a>
-        <a href="../avif-to-png/" class="nav-link"><span>AVIF → PNG</span></a>
-        <a href="../svg-to-png/" class="nav-link"><span>SVG → PNG</span></a>
-        <a href="../png-to-ico/" class="nav-link"><span>PNG → ICO</span></a>
+        <a href="../webp-to-png/" class="nav-link "><span>WebP → PNG</span></a>
+        <a href="../png-to-webp/" class="nav-link "><span>PNG → WebP</span></a>
+        <a href="../heic-to-jpg/" class="nav-link active"><span>HEIC → JPG</span></a>
+        <a href="../avif-to-png/" class="nav-link "><span>AVIF → PNG</span></a>
+        <a href="../svg-to-png/" class="nav-link "><span>SVG → PNG</span></a>
+        <a href="../png-to-ico/" class="nav-link "><span>PNG → ICO</span></a>
       </nav>
       
       <div class="media-shelf">
@@ -71,6 +140,7 @@
           <a href="../index.html">Pixiva</a>
           <span class="breadcrumb-sep">/</span>
           <span>HEIC to JPG</span>
+          <button class="btn-fav-star" onclick="toggleFavorite('heic-to-jpg', this)" title="Toggle Favorite" style="margin-left: 8px;"><i class="fa-solid fa-star"></i></button>
         </div>
         <div class="top-actions">
           <button class="btn-command-palette-trigger" id="palette-trigger">
@@ -85,20 +155,51 @@
         
         <section class="hero">
           <h1 class="hero-title">Convert HEIC to JPG</h1>
-          <p class="hero-subtitle">Convert Apple iPhone HEIC pictures to widely compatible JPG format. 100% private, fully offline in-browser execution.</p>
+          <p class="hero-subtitle">Decode iPhone HEIC/HEIF photos and convert them to standard universally-compatible JPEGs locally in browser memory.</p>
           <div class="privacy-badge">
             <i class="fa-solid fa-shield-halved"></i> 100% Client-Side
+          </div>
+          
+          <div class="social-proof-badges" style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 24px;">
+            <span class="proof-badge" style="font-size: 0.75rem; color: var(--text-secondary); background: rgba(255,255,255,0.02); padding: 6px 12px; border-radius: 20px; border: 1px solid var(--border-color); display: inline-flex; align-items: center; gap: 6px;">
+              <i class="fa-solid fa-circle-check" style="color: var(--color-success);"></i> 100% Private
+            </span>
+            <span class="proof-badge" style="font-size: 0.75rem; color: var(--text-secondary); background: rgba(255,255,255,0.02); padding: 6px 12px; border-radius: 20px; border: 1px solid var(--border-color); display: inline-flex; align-items: center; gap: 6px;">
+              <i class="fa-solid fa-circle-check" style="color: var(--color-success);"></i> No Upload Limits
+            </span>
+            <span class="proof-badge" style="font-size: 0.75rem; color: var(--text-secondary); background: rgba(255,255,255,0.02); padding: 6px 12px; border-radius: 20px; border: 1px solid var(--border-color); display: inline-flex; align-items: center; gap: 6px;">
+              <i class="fa-solid fa-circle-check" style="color: var(--color-success);"></i> Works Offline
+            </span>
+            <span class="proof-badge" style="font-size: 0.75rem; color: var(--text-secondary); background: rgba(255,255,255,0.02); padding: 6px 12px; border-radius: 20px; border: 1px solid var(--border-color); display: inline-flex; align-items: center; gap: 6px;">
+              <i class="fa-solid fa-circle-check" style="color: var(--color-success);"></i> Free Forever
+            </span>
           </div>
         </section>
 
         <!-- Dropzone -->
-        <div class="workspace-dropzone" id="converter-dropzone">
+        <div class="workspace-dropzone" id="converter-dropzone" style="cursor: default;">
           <div class="dropzone-icon-wrapper">
-            <i class="fa-solid fa-mobile-screen-button"></i>
+            <i class="fa-solid fa-arrow-right-arrow-left"></i>
           </div>
-          <h2>Drop your HEIC files to convert</h2>
-          <p>Your files never leave your browser. Ever.</p>
-          <input type="file" id="converter-file-input" style="display: none;" accept=".heic" multiple>
+          <h2>Drag & drop your HEIC files or <a href="javascript:void(0);" onclick="document.getElementById('converter-file-input').click();" style="color: var(--color-primary); text-decoration: underline;">Browse Files</a></h2>
+          <p>Press <kbd>Ctrl + V</kbd> to paste a screenshot directly</p>
+          <input type="file" id="converter-file-input" style="display: none;" accept=".heic,.heif" multiple>
+        </div>
+
+        <!-- Compatibility Status Bar -->
+        <div class="compatibility-status-bar" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; max-width: 600px; margin: 24px auto; background: rgba(255,255,255,0.01); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 12px;">
+          <div style="text-align: center; border-right: 1px solid var(--border-color);">
+            <div style="font-size: 0.65rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700; letter-spacing: 0.5px;">Supports</div>
+            <div style="font-size: 0.8rem; font-weight: 700; color: #fff; margin-top: 4px;">HEIC format</div>
+          </div>
+          <div style="text-align: center; border-right: 1px solid var(--border-color);">
+            <div style="font-size: 0.65rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700; letter-spacing: 0.5px;">Operations</div>
+            <div style="font-size: 0.8rem; font-weight: 700; color: var(--color-success); margin-top: 4px;"><i class="fa-solid fa-circle-check"></i> 100% Offline</div>
+          </div>
+          <div style="text-align: center;">
+            <div style="font-size: 0.65rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700; letter-spacing: 0.5px;">Privacy</div>
+            <div style="font-size: 0.8rem; font-weight: 700; color: var(--color-success); margin-top: 4px;"><i class="fa-solid fa-shield-halved"></i> No Uploads</div>
+          </div>
         </div>
 
         <!-- Active Workspace -->
@@ -107,6 +208,7 @@
             <h2 class="panel-title"><i class="fa-solid fa-gears"></i> Batch Operations Queue</h2>
             
             <div class="form-group" style="display: none;">
+              <!-- Hidden or hardcoded target select for presets -->
               <input type="hidden" id="converter-target-format" value="jpeg">
             </div>
 
@@ -122,43 +224,116 @@
           </div>
         </section>
 
+        <!-- Tool workspace footer ad -->
+        <div class="ad-placeholder"></div>
+
         <!-- SEO Article & Guide -->
         <section class="faq-section" style="margin-top: 60px;">
-          <h2 class="faq-title" style="text-align: left; margin-bottom: 20px;">What is a HEIC file?</h2>
+          <h2 class="faq-title" style="text-align: left; margin-bottom: 20px;">Everything about converting HEIC to JPG</h2>
           <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 24px;">
-            HEIC (High Efficiency Image Container) is the default image capture format on iPhones running iOS 11 and later. While HEIC is excellent for saving storage space, it is notoriously difficult to open on Windows PCs, Android devices, or web browsers. Converting your photos to JPG makes them universally accessible.
+            HEIC is the default image format used by Apple on iOS devices to save space. However, Windows, Android, and many desktop editors do not support HEIC file displays. Converting them to JPEGs makes them readable on all platforms.
           </p>
+
+          <h3 style="font-size: 1.2rem; font-family: var(--font-title); margin-bottom: 12px;">HEIC vs JPG: What is the difference?</h3>
+          <div class="batch-list" style="margin-bottom: 30px;">
+            <div class="pipeline-step-item">
+              <span><strong>HEIC:</strong> Optimized for specific file properties client side.</span>
+            </div>
+            <div class="pipeline-step-item">
+              <span><strong>JPG:</strong> Lossless target formats operating directly in browser cache.</span>
+            </div>
+          </div>
 
           <h2 class="faq-title">Frequently Asked Questions</h2>
           <div class="faq-grid">
             <div class="faq-card">
               <div class="faq-header">
-                <span>How does HEIC conversion work locally?</span>
+                <span>Can I convert iPhone HEIC photos to JPG?</span>
                 <i class="fa-solid fa-chevron-down"></i>
               </div>
               <div class="faq-body">
                 <div class="faq-content">
-                  Pixiva dynamically loads a secure, client-side decoder library (`heic2any.js`) inside your browser to parse the HEIC metadata and extract image arrays. This guarantees that your private camera photos are never sent over the internet or uploaded to a cloud.
+                  Yes, absolutely. Pixiva natively decodes raw Apple HEIC camera blobs using a local decoder script inside your browser. It formats them to standard JPG/JPEG images which are readable on all systems.
                 </div>
               </div>
             </div>
 
             <div class="faq-card">
               <div class="faq-header">
-                <span>Will I lose my metadata or EXIF data?</span>
+                <span>Will my HEIC metadata be kept?</span>
                 <i class="fa-solid fa-chevron-down"></i>
               </div>
               <div class="faq-body">
                 <div class="faq-content">
-                  Converting HEIC to JPG via standard canvas rendering strips embedded EXIF headers (like location coordinates or camera models) to keep files light and secure.
+                  Because conversion is performed using canvas image rasterization client-side, embedded EXIF metadata (like GPS or camera settings) is stripped to protect your privacy and reduce file size.
                 </div>
               </div>
             </div>
           </div>
         </section>
 
+        <!-- Bottom Page Ad Slot -->
+        <div class="ad-placeholder"></div>
+
+        <!-- Unified Footer -->
+        <footer class="app-footer">
+          <div class="footer-row">
+            <div class="footer-column" style="flex: 2; min-width: 250px;">
+              <a href="../index.html" class="footer-brand">
+                <i class="fa-solid fa-bolt" style="color:var(--color-primary);"></i>
+                <span>Pixiva</span>
+              </a>
+              <p style="font-size:0.78rem; color:var(--text-muted); line-height:1.6; margin-top:8px;">
+                All image processing happens locally in your browser. No uploads, no tracking of your files, no servers involved.
+              </p>
+              <a href="https://github.com/" target="_blank" class="footer-link" style="margin-top: 12px; font-size: 0.78rem;">
+                <i class="fa-brands fa-github"></i> ⭐ Open Source Components
+              </a>
+            </div>
+            <div class="footer-column">
+              <h4>Workspace</h4>
+              <a href="../image-compressor/" class="footer-link">Image Compressor</a>
+              <a href="../image-resizer/" class="footer-link">Image Resizer</a>
+            </div>
+            <div class="footer-column">
+              <h4>Converters</h4>
+              <a href="../webp-to-png/" class="footer-link">WebP → PNG</a>
+              <a href="../png-to-webp/" class="footer-link">PNG → WebP</a>
+              <a href="../heic-to-jpg/" class="footer-link">HEIC → JPG</a>
+              <a href="../avif-to-png/" class="footer-link">AVIF → PNG</a>
+            </div>
+            <div class="footer-column">
+              <h4>Resources</h4>
+              <a href="../compare/webp-vs-png/" class="footer-link">Compare Formats</a>
+              <a href="../privacy/" class="footer-link">Privacy Policy</a>
+              <a href="../terms/" class="footer-link">Terms of Service</a>
+              <a href="../contact/" class="footer-link">Contact</a>
+            </div>
+          </div>
+          
+          <div class="footer-row" style="border-top: 1px solid var(--border-color); padding-top: 20px; margin-top: 10px;">
+            <div style="font-size: 0.78rem; color: var(--text-muted); line-height: 1.6;">
+              <strong style="color: #fff; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.5px; display: block; margin-bottom: 6px;">Supported Formats</strong>
+              PNG • JPG • JPEG • WebP • AVIF • HEIC • SVG • ICO
+            </div>
+          </div>
+
+          <div class="footer-bottom">
+            <span>© 2026 Pixiva. Offline-first local execution.</span>
+            <span>Zero-server privacy assurance</span>
+          </div>
+        </footer>
+
       </div>
     </main>
+  </div>
+
+  <!-- Mobile Bottom Navigation Bar -->
+  <div class="bottom-nav-bar">
+    <a href="../index.html" class="bottom-nav-link" data-action="home">
+      <i class="fa-solid fa-house"></i>
+      <span>Home</span>
+    </a>
   </div>
 
   <!-- Command Palette Modal -->
