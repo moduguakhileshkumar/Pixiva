@@ -1,98 +1,116 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://pixiva.io/</loc>
-    <lastmod>2026-07-12</lastmod>
+    <loc>https://pixiva.pages.dev/</loc>
+    <lastmod>2026-07-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://pixiva.io/image-compressor/</loc>
-    <lastmod>2026-07-12</lastmod>
+    <loc>https://pixiva.pages.dev/image-compressor/</loc>
+    <lastmod>2026-07-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://pixiva.io/image-resizer/</loc>
-    <lastmod>2026-07-12</lastmod>
+    <loc>https://pixiva.pages.dev/image-resizer/</loc>
+    <lastmod>2026-07-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://pixiva.io/webp-to-png/</loc>
-    <lastmod>2026-07-12</lastmod>
+    <loc>https://pixiva.pages.dev/webp-to-png/</loc>
+    <lastmod>2026-07-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pixiva.io/png-to-webp/</loc>
-    <lastmod>2026-07-12</lastmod>
+    <loc>https://pixiva.pages.dev/png-to-webp/</loc>
+    <lastmod>2026-07-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pixiva.io/heic-to-jpg/</loc>
-    <lastmod>2026-07-12</lastmod>
+    <loc>https://pixiva.pages.dev/heic-to-jpg/</loc>
+    <lastmod>2026-07-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pixiva.io/avif-to-png/</loc>
-    <lastmod>2026-07-12</lastmod>
+    <loc>https://pixiva.pages.dev/avif-to-png/</loc>
+    <lastmod>2026-07-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pixiva.io/svg-to-png/</loc>
-    <lastmod>2026-07-12</lastmod>
+    <loc>https://pixiva.pages.dev/svg-to-png/</loc>
+    <lastmod>2026-07-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pixiva.io/png-to-ico/</loc>
-    <lastmod>2026-07-12</lastmod>
+    <loc>https://pixiva.pages.dev/png-to-ico/</loc>
+    <lastmod>2026-07-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pixiva.io/compare/webp-vs-png/</loc>
-    <lastmod>2026-07-12</lastmod>
+    <loc>https://pixiva.pages.dev/jpg-to-png/</loc>
+    <lastmod>2026-07-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pixiva.pages.dev/png-to-jpg/</loc>
+    <lastmod>2026-07-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pixiva.pages.dev/webp-to-jpg/</loc>
+    <lastmod>2026-07-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pixiva.pages.dev/compare/webp-vs-png/</loc>
+    <lastmod>2026-07-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pixiva.io/compare/png-vs-jpg/</loc>
-    <lastmod>2026-07-12</lastmod>
+    <loc>https://pixiva.pages.dev/compare/png-vs-jpg/</loc>
+    <lastmod>2026-07-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pixiva.io/compare/avif-vs-webp/</loc>
-    <lastmod>2026-07-12</lastmod>
+    <loc>https://pixiva.pages.dev/compare/avif-vs-webp/</loc>
+    <lastmod>2026-07-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pixiva.io/about/</loc>
-    <lastmod>2026-07-12</lastmod>
+    <loc>https://pixiva.pages.dev/about/</loc>
+    <lastmod>2026-07-14</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://pixiva.io/contact/</loc>
-    <lastmod>2026-07-12</lastmod>
+    <loc>https://pixiva.pages.dev/contact/</loc>
+    <lastmod>2026-07-14</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://pixiva.io/privacy/</loc>
-    <lastmod>2026-07-12</lastmod>
+    <loc>https://pixiva.pages.dev/privacy/</loc>
+    <lastmod>2026-07-14</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://pixiva.io/terms/</loc>
-    <lastmod>2026-07-12</lastmod>
+    <loc>https://pixiva.pages.dev/terms/</loc>
+    <lastmod>2026-07-14</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>

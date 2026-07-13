@@ -29,15 +29,29 @@
       </div>
       
       <nav class="sidebar-nav">
+        <!-- Favorites dynamic section -->
+        <div id="favorites-nav-section" style="display: none;"></div>
+
         <div class="nav-section-title">Workspace Tools</div>
-        <a href="image-compressor/" class="nav-link">
+        <a href="./image-compressor/" class="nav-link ">
           <i class="fa-solid fa-minimize"></i>
           <span>Image Compressor</span>
         </a>
-        <a href="image-resizer/" class="nav-link">
+        <a href="./image-resizer/" class="nav-link ">
           <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
           <span>Image Resizer</span>
         </a>
+        
+        <div class="nav-section-title">Converters</div>
+        <a href="./webp-to-png/" class="nav-link "><span>WebP → PNG</span></a>
+        <a href="./png-to-webp/" class="nav-link "><span>PNG → WebP</span></a>
+        <a href="./heic-to-jpg/" class="nav-link "><span>HEIC → JPG</span></a>
+        <a href="./avif-to-png/" class="nav-link "><span>AVIF → PNG</span></a>
+        <a href="./svg-to-png/" class="nav-link "><span>SVG → PNG</span></a>
+        <a href="./png-to-ico/" class="nav-link "><span>PNG → ICO</span></a>
+        <a href="./jpg-to-png/" class="nav-link "><span>JPG → PNG</span></a>
+        <a href="./png-to-jpg/" class="nav-link "><span>PNG → JPG</span></a>
+        <a href="./webp-to-jpg/" class="nav-link "><span>WebP → JPG</span></a>
       </nav>
       
       <div class="sidebar-footer">
@@ -86,32 +100,51 @@
         </div>
 
         <!-- Unified Footer -->
-        <footer class="app-footer" style="margin-left: 0; padding-left: 0; padding-right: 0; text-align: left;">
+        <footer class="app-footer">
           <div class="footer-row">
             <div class="footer-column" style="flex: 2; min-width: 250px;">
-              <a href="index.html" class="footer-brand">
+              <a href="./index.html" class="footer-brand">
                 <i class="fa-solid fa-bolt" style="color:var(--color-primary);"></i>
                 <span>Pixiva</span>
               </a>
               <p style="font-size:0.78rem; color:var(--text-muted); line-height:1.6; margin-top:8px;">
                 All image processing happens locally in your browser. No uploads, no tracking of your files, no servers involved.
               </p>
+              <a href="https://github.com/" target="_blank" class="footer-link" style="margin-top: 12px; font-size: 0.78rem;">
+                <i class="fa-brands fa-github"></i> ⭐ Open Source Components
+              </a>
             </div>
             <div class="footer-column">
               <h4>Workspace</h4>
-              <a href="image-compressor/" class="footer-link">Image Compressor</a>
-              <a href="image-resizer/" class="footer-link">Image Resizer</a>
+              <a href="./image-compressor/" class="footer-link">Image Compressor</a>
+              <a href="./image-resizer/" class="footer-link">Image Resizer</a>
             </div>
             <div class="footer-column">
-              <h4>Company</h4>
-              <a href="about/" class="footer-link">About Us</a>
-              <a href="contact/" class="footer-link">Contact</a>
-              <a href="privacy/" class="footer-link">Privacy Policy</a>
-              <a href="terms/" class="footer-link">Terms of Service</a>
+              <h4>Converters</h4>
+              <a href="./webp-to-png/" class="footer-link">WebP → PNG</a>
+              <a href="./png-to-webp/" class="footer-link">PNG → WebP</a>
+              <a href="./heic-to-jpg/" class="footer-link">HEIC → JPG</a>
+              <a href="./jpg-to-png/" class="footer-link">JPG → PNG</a>
+            </div>
+            <div class="footer-column">
+              <h4>Resources</h4>
+              <a href="./compare/webp-vs-png/" class="footer-link">Compare Formats</a>
+              <a href="./privacy/" class="footer-link">Privacy Policy</a>
+              <a href="./terms/" class="footer-link">Terms of Service</a>
+              <a href="./contact/" class="footer-link">Contact</a>
             </div>
           </div>
+          
+          <div class="footer-row" style="border-top: 1px solid var(--border-color); padding-top: 20px; margin-top: 10px;">
+            <div style="font-size: 0.78rem; color: var(--text-muted); line-height: 1.6;">
+              <strong style="color: #fff; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.5px; display: block; margin-bottom: 6px;">Supported Formats</strong>
+              PNG • JPG • JPEG • WebP • AVIF • HEIC • SVG • ICO
+            </div>
+          </div>
+
           <div class="footer-bottom">
             <span>© 2026 Pixiva. Offline-first local execution.</span>
+            <span>Zero-server privacy assurance</span>
           </div>
         </footer>
 

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://pixiva.io/sitemap.xml
+Sitemap: https://pixiva.pages.dev/sitemap.xml
