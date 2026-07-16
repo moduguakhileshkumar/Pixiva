@@ -242,7 +242,7 @@ function generateHtml(folder, data) {
     <!-- Sidebar Navigation -->
     <aside class="sidebar" id="sidebar">
       <div class="sidebar-header">
-        <a href="../index.html" class="logo">
+        <a href="../" class="logo">
           <i class="fa-solid fa-bolt"></i>
           <span>Pixiva</span>
         </a>
@@ -290,7 +290,7 @@ function generateHtml(folder, data) {
     <main class="main-content">
       <header class="top-nav">
         <div class="breadcrumb">
-          <a href="../index.html">Pixiva</a>
+          <a href="../">Pixiva</a>
           <span class="breadcrumb-sep">/</span>
           <span>${data.inputName} to ${data.outputName}</span>
           <button class="btn-fav-star" onclick="toggleFavorite('${folder}', this)" title="Toggle Favorite" style="margin-left: 8px;"><i class="fa-solid fa-star"></i></button>
@@ -432,7 +432,7 @@ function generateHtml(folder, data) {
         <footer class="app-footer">
           <div class="footer-row">
             <div class="footer-column" style="flex: 2; min-width: 250px;">
-              <a href="../index.html" class="footer-brand">
+              <a href="../" class="footer-brand">
                 <i class="fa-solid fa-bolt" style="color:var(--color-primary);"></i>
                 <span>Pixiva</span>
               </a>
@@ -483,7 +483,7 @@ function generateHtml(folder, data) {
 
   <!-- Mobile Bottom Navigation Bar -->
   <div class="bottom-nav-bar">
-    <a href="../index.html" class="bottom-nav-link" data-action="home">
+    <a href="../" class="bottom-nav-link" data-action="home">
       <i class="fa-solid fa-house"></i>
       <span>Home</span>
     </a>

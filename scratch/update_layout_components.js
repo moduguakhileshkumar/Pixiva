@@ -86,7 +86,7 @@ function generateFooter(prefix) {
   return `<footer class="app-footer">
           <div class="footer-row" style="align-items: flex-start;">
             <div class="footer-column" style="flex: 2; min-width: 200px;">
-              <a href="${prefix}index.html" class="footer-brand">
+              <a href="${prefix}" class="footer-brand">
                 <i class="fa-solid fa-bolt" style="color:var(--color-primary);"></i>
                 <span>Pixiva</span>
               </a>
