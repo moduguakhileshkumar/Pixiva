@@ -446,6 +446,8 @@ function generateHtml(folder, data) {
   <meta name="keywords" content="${data.keywords}">
   <meta name="robots" content="index, follow">
   <meta name="google-site-verification" content="hMkvLYmRffI9Dj-gbPiLgS6iQeeUMunP_2vUq1-uCRQ" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5535227871644720"
+     crossorigin="anonymous"></script>
 
   <link rel="icon" type="image/png" href="https://img.icons8.com/neon/96/000000/wrench.png">
   <link rel="manifest" href="../manifest.json">
